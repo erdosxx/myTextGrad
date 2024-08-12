@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "mytextgrad"
+version = "0.1.0"
+description = "My first LLM application by using textGrad"
+authors = ["Norel <norel.evoagile@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+package-mode = false
+
+[virtualenv]
+in-project = true
+
+[tool.poetry.dependencies]
+python = ">=3.10, <= 3.12.4"
+textgrad = "^0.1.4"
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.26.0"
+ipykernel = "^6.29.5"
+jupyter = "^1.0.0"
+black = "^24.4.2"
+pylint = "^3.2.5"
+PyQt5 = "^5.15.10"
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

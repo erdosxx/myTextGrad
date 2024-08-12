@@ -1,0 +1,13 @@
+# just is a command runner, Justfile is very similar to Makefile, but simpler.
+
+# use nushell for shell commands
+set shell := ["zsh", "-c"]
+
+############################################################################
+#
+#  Common commands(suitable for all machines)
+#
+############################################################################
+
+qtconsole:
+  jupyter qtconsole --kernel=myTextGrad &
