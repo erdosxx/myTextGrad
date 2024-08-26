@@ -70,10 +70,14 @@
             python312Packages.pyside2
             # python312Packages.setuptools
             qt5Full
+            gnugrep
+            gawk
+            pass
           ];
           shellHook = ''
             alias vi="nvim"
             just qt
+            # export OPENAI_API_KEY=$(${pkgs.pass}/bin/pass openai.com/id2 |${pkgs.gnugrep}/bin/grep "API_key_evoagile" |${pkgs.gawk}/bin/awk '{print $2}')
           '';
         };
       });

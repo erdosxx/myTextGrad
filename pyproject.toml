@@ -18,6 +18,7 @@ pandas = "^2.2.2"
 python-dotenv = "^1.0.1"
 textgrad = "^0.1.5"
 matplotlib = "^3.9.2"
+openai = "^1.42.0"
 
 [tool.poetry.group.dev.dependencies]
 ipython = "^8.26.0"
