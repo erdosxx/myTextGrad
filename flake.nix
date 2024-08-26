@@ -73,6 +73,7 @@
           ];
           shellHook = ''
             alias vi="nvim"
+            just qt
           '';
         };
       });
