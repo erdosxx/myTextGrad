@@ -9,5 +9,14 @@ set shell := ["zsh", "-c"]
 #
 ############################################################################
 
-qtconsole:
-  jupyter qtconsole --kernel=myTextGrad &
+dev:
+  nix develop ".#poetry" 
+
+qt:
+  jupyter qtconsole --kernel=python3 &
+
+up:
+  nix flake update
+
+repl:
+  nix repl -f flake:poetry2nix
