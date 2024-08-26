@@ -26,7 +26,9 @@ def eval_sample(item, eval_fn, model):
         x, requires_grad=False, role_description="query to the language model"
     )
     y = tg.Variable(
-        y, requires_grad=False, role_description="correct answer for the query"
+        int(y),
+        requires_grad=False,
+        role_description="correct answer for the query",
     )
     response = model(x)
     try:
@@ -138,7 +140,7 @@ for epoch in range(3):
                 role_description="query to the language model",
             )
             y = tg.Variable(
-                y,
+                int(y),
                 requires_grad=False,
                 role_description="correct answer for the query",
             )
