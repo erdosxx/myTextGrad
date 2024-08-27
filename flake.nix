@@ -35,12 +35,14 @@
                 else
                   pkg) build-requirements);
             })) pypkgs-build-requirements);
+        python_ver = "python312";
+        pythonPackages = pkgs.${python_ver + "Packages"};
       in {
         packages = {
           myapp = mkPoetryApplication {
             projectDir = self;
             # projectDir = ./.;
-            python = pkgs.python312;
+            python = pkgs.${python_ver};
             preferWheels = true;
             overrides = p2n-overrides;
           };
@@ -67,7 +69,7 @@
             # (poetry.override { python3 = python311; })
             poetry
             # for qtconsole
-            python312Packages.pyside2
+            pythonPackages.pyside2
             # python312Packages.setuptools
             qt5Full
             gnugrep
